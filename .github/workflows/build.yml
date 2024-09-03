@@ -78,7 +78,7 @@ jobs:
           # We build with 11, but down below we run with 8.
           java-version: 11
       - name: Download artifacts
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v4.1.7
         with:
           name: artifacts
           path: binaries
@@ -106,7 +106,7 @@ jobs:
         run: echo "REVISION=${{ needs.build.outputs.revision }}" >> $GITHUB_ENV
       - uses: actions/checkout@v1
       - name: Download artifacts
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v4.1.7
         with:
           name: artifacts
           path: repository
@@ -129,7 +129,7 @@ jobs:
         run: echo "REVISION=${{ needs.build.outputs.revision }}" >> $GITHUB_ENV
       - uses: actions/checkout@v1
       - name: Download artifacts
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v4.1.7
         with:
           name: artifacts
           path: repository
